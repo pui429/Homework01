@@ -1,0 +1,135 @@
+.con1 {
+  h2 {
+    font-size: 43px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  h2 + p {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 35px;
+  }
+  .more {
+    text-align: center;
+    a {
+      display: inline-block;
+      width: 180px;
+      height: 50px;
+      border: 1px solid #000;
+      text-align: center;
+      line-height: 50px;
+      font-size: 15px;
+      border-radius: 25px;
+      position: relative;
+      overflow: hidden;
+
+      i {
+        vertical-align: middle;
+        margin-left: 5px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 250px;
+        height: 70px;
+        background: #f7931d;
+        transition: 0.4s;
+        transform: skewx(-15deg);
+        position: absolute;
+        left: -260px;
+        top: -10px;
+      }
+      span {
+        position: relative;
+        transition: 0.4s;
+        z-index: 5;
+      }
+      &:hover {
+        border-color: #f7931d;
+        span {
+          color: #fff;
+        }
+      }
+    }
+    &:hover {
+      a {
+        &::after {
+          left: -10px;
+        }
+      }
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 40px;
+
+    li {
+      margin-right: 20px;
+      width: 270px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        div {
+          width: 270px;
+          height: 370px;
+          overflow: hidden;
+          position: relative;
+          img {
+            width: 100%;
+            transition: 0.4s;
+          }
+          span {
+            display: block;
+            width: 270px;
+            height: 370px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0);
+            opacity: 0;
+            transition: 0.4s;
+          }
+        }
+        h3 {
+          font-size: 20px;
+          margin-top: 20px;
+          &::after {
+            content: "";
+            display: block;
+            width: 270px;
+            height: 1px;
+            background: #e7e7e7;
+            margin: 20px 0;
+          }
+          span {
+            display: block;
+            margin-top: 5px;
+          }
+        }
+        p {
+          font-size: 15px;
+          line-height: 1.4;
+          word-break: keep-all;
+        }
+      }
+      &:hover {
+        a {
+          div {
+            img {
+              transform: scale(1.05);
+            }
+            span {
+              opacity: 0.3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

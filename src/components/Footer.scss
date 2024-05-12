@@ -1,0 +1,20 @@
+#footer {
+  background: #131313;
+  .inner {
+    padding: 35px 0;
+    height: 164px;
+  }
+  p {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 300;
+    &:nth-child(4) {
+      margin-top: 10px;
+    }
+  }
+  .top {
+    position: absolute;
+    right: -50px;
+    top: -70px;
+  }
+}
